@@ -1,5 +1,12 @@
 .footer{
-  bottom: 0px;
-  height: 60px;
+  position: fixed;
+  bottom: 0;
   width: 100%;
+  transform: transform(100%);
+  transition: transform 0.5s ease-out;
+  height: 40px;
+}
+
+footer.show{
+  transform: translateY(0);
 }

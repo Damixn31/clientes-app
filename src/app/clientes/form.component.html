@@ -1,0 +1,41 @@
+<div class="card bg-dark text-white">
+  <div class="card-body">
+
+
+      <!--ngModel lo que haces es poblar con los datos del formulario al objeto cliente y a sus atributos 
+      en otras palabras lo que hace es un binding = poblar / enlazar -->
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card p-4 shadow">
+        <div class="card-body">
+          <h3 class="card-title mb-4 text-dark">Crear Cliente</h3>
+          <form (ngSubmit) = "create()">
+            <div class="mb-3">
+              <label for="nombre" class="form-label text-dark">Nombre</label>
+              <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre" [(ngModel)]="cliente.nombre">
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label text-dark">Apellido</label>
+              <input type="text" class="form-control" name="apellido" placeholder="Ingresa tu apellido" [(ngModel)]="cliente.apellido">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label text-dark">Email</label>
+              <input class="form-control" name="email" rows="3" placeholder="Ingresa tu mensaje" [(ngModel)]="cliente.email">
+            </div>
+
+            <div class="d-grid">
+              <button role="button" class="btn btn-success">Crear</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
