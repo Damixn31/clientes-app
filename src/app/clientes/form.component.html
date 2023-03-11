@@ -11,7 +11,7 @@
       <div class="card p-4 shadow">
         <div class="card-body">
           <h3 class="card-title mb-4 text-dark">Crear Cliente</h3>
-          <form (ngSubmit) = "create()">
+          <form>
             <div class="mb-3">
               <label for="nombre" class="form-label text-dark">Nombre</label>
               <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre" [(ngModel)]="cliente.nombre">
@@ -26,7 +26,11 @@
             </div>
 
             <div class="d-grid">
-              <button role="button" class="btn btn-success">Crear</button>
+              <button role="button" class="btn btn-success" (click)='create()' *ngIf="!cliente.id else elseBlock">Crear</button>
+              <ng-template #elseBlock>
+
+              <button role="button" class="btn btn-success" (click)='update()'>Editar</button>
+              </ng-template>
             </div>
 
           </form>
